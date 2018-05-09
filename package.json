@@ -1,0 +1,23 @@
+{
+  "name": "ghc-javascript-magic",
+  "version": "1.0.0",
+  "description": "Javascript magic for Generic Hipster Coffee",
+  "devDependencies": {
+    "MyFirstCoffeeShop": "github:coreskill/generic-hipster-coffee",
+    "chokidar": "^2.0.3",
+    "npm-run-all": "^4.1.2"
+  },
+  "scripts": {
+    "postinstall": "npm run ghc:install",
+    "start": "run-p watch ghc:watch",
+    "watch": "node watch",
+    "build": "echo 'TODO' || npm run ghc:build",
+    "ghc:install": "cd node_modules/MyFirstCoffeeShop && npm i",
+    "ghc:build": "npm run ghc:gulp -- build",
+    "ghc:watch": "npm run ghc:gulp -- develop",
+    "ghc:gulp": "cd node_modules/MyFirstCoffeeShop && npx gulp"
+  },
+  "author": "Kate Miháliková <kate@katemihalikova.cz>",
+  "repository": "coreskill/ghc-javascript-magic",
+  "license": "MIT"
+}
